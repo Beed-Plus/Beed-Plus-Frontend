@@ -9,10 +9,10 @@ export default function Header(){
     return(
         <div className="flex justify-between items-center">
             <div className="flex justify-center items-center gap-2">
-                <div onClick={()=>{setIsNavOpen(true)}} className="md:hidden">
+                <div onClick={()=>{setIsNavOpen(true)}} className="lg:hidden">
                     <img src={Images.hamburger} />
                 </div>
-                <div className="w-[94px] md:w-[170px]">
+                <div className="w-[94px] lg:w-[170px]">
                     <img src={Images.logoWhite} />
                 </div>
             </div>
