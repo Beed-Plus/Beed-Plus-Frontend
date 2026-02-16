@@ -10,7 +10,7 @@ export default function Top100(){
     return(
         <Baselayout
             customTopComponent={
-                <div className="bg-[#FFEBCB]">
+                <div className="bg-[#FFEBCB] inset-shadow-[-9px_-5px_15px_0_rgba(0,0,0,0.25)]">
                     <div className="lg:px-20 px-5 py-5 bg-[url(/scribble-bg.png)] bg-cover">
                         <Header logoType="dark" />
                         <div className="h-full relative flex justify-center items-center">
