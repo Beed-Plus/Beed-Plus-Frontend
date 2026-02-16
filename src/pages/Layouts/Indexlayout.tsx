@@ -1,6 +1,4 @@
-
-
-export default function Indexlayout(){
+export default function (){
     return(
         <></>
     )

@@ -1,2 +1,5 @@
 export * from './DiagonalArrowUp'
 export * from './CloseWhite'
+export * from './FacebookIcon'
+export * from './InstagramLogo'
+export * from './TiktokLogo'

@@ -4,11 +4,12 @@ import { DiagonalArrowUp } from "../Icons";
 interface ABInterface {
     title: string;
     link: string
+    small?: boolean
 }
 
 export default function ActionButton(props: ABInterface){
     return(
-        <Link to={props.link} className="flex gap-2 text-white text-[14px] md:text-[18px] border-[2px] border-primary-yellow px-4 md:px-6 py-2 text-center items-center justify-center rounded-[25px] bg-neutral-500/10 backdrop-blur-sm hover:bg-neutral-500/20">
+        <Link to={props.link} className={`flex text-white ${props.small ? "text-[12px] gap-1" : "gap-2 text-[14px] md:text-[18px]"} border-[2px] border-primary-yellow ${props.small ? "px-2" : "px-4 md:px-6"} py-2 text-center items-center justify-center rounded-[25px] bg-neutral-500/10 backdrop-blur-sm hover:bg-neutral-500/20`}>
             <DiagonalArrowUp scale={20} />
             {props.title}
         </Link>
