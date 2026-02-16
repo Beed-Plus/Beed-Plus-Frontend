@@ -14,9 +14,9 @@ export default function Header(props: HeaderInterface){
     return(
         <div className="flex justify-between items-center">
             <div className="flex justify-center items-center gap-2">
-                <Link to={"/"} onClick={()=>{setIsNavOpen(true)}} className="lg:hidden">
+                <div onClick={()=>{setIsNavOpen(true)}} className="lg:hidden">
                     <img src={Images.hamburger} />
-                </Link>
+                </div>
                 <Link to={"/"} className="w-[94px] lg:w-[170px]">
                     <img src={props.logoType == "dark" ? Images.logoBlack : Images.logoWhite} />
                 </Link>
