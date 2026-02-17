@@ -11,7 +11,7 @@ export default function VideoRankingComponent(props: VRCInterface){
             <div className="text-[20px] lg:text-[64px] font-bold">{props.position}</div>
             <div className="flex gap-4 items-center justify-center border-b-[1px] py-2 lg:py-6 border-[#433E3E]">
                 <img src={Images.rankingImg} alt="" className="w-[55px] h-[55px] lg:w-[128px] lg:h-[128px]" />
-                <div className="w-[70vw]">
+                <div className="w-[60vw]">
                     <div className="text-[15px] lg:text-[28px] line-clamp-2">
                         Lorem ipsum dolor sit amet consectetur. Habitant odio morbi accumsan non 
                     </div>
