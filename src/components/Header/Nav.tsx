@@ -22,10 +22,6 @@ export default function Nav(props: NavInterface){
                     title="Top Creators"
                     link="/topcreators"
                 />
-                <NavItem 
-                    title="Campaigns"
-                    link="/campaigns"
-                />
                 
             </div>
             {/* mobile nav */}
@@ -47,12 +43,7 @@ export default function Nav(props: NavInterface){
                     <NavItem 
                         title="Top Creators"
                         link="/topcreators"
-                    />
-                    <div className="p-2" />
-                    <NavItem 
-                        title="Campaigns"
-                        link="/campaigns"
-                    />                    
+                    />                
                 </div>
             </div>
         </>

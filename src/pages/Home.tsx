@@ -30,7 +30,7 @@ export default function Home(){
                     </div>
                 </div>
                 <div className="hidden lg:flex w-[50%] justify-center items-center">
-                    <CategoriesCard />
+                    <CategoriesCard link="/charts/categories/lifestyle" title="Lifestyle" />
                 </div>
             </div>
             }

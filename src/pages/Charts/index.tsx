@@ -10,17 +10,17 @@ export default function Charts(){
         <Baselayout
             topComponent={
                 <Link to={"/charts/top100"}>
-                <div className="py-4 lg:py-12">
-                    <div className="relative h-[214px] md:h-auto lg:p-8 p-4 bg-[#FFEBCB] bg-[url(/scribble-bg.png)] bg-cover rounded-[24px] inset-shadow-[-9px_-5px_15px_0_rgba(0,0,0,0.25)]">
-                        <div className="relative flex items-end h-full">
-                            <div className="absolute top-0 right-0 w-[95px]">
-                                <img src={Images.logoBlack} />
+                    <div className="py-4 lg:py-12">
+                        <div className="relative h-[214px] md:h-auto lg:p-8 p-4 bg-[#FFEBCB] bg-[url(/scribble-bg.png)] bg-cover rounded-[24px] inset-shadow-[-9px_-5px_15px_0_rgba(0,0,0,0.25)]">
+                            <div className="relative flex items-end h-full">
+                                <div className="absolute top-0 right-0 w-[95px]">
+                                    <img src={Images.logoBlack} />
+                                </div>
+                                <h1 className="lg:text-[192px] text-[64px] font-bold">Top 100</h1>
                             </div>
-                            <h1 className="lg:text-[192px] text-[64px] font-bold">Top 100</h1>
                         </div>
                     </div>
-                </div>
-            </Link>
+                </Link>
             }
         >
             <div className="lg:py-6">
@@ -30,7 +30,7 @@ export default function Charts(){
                         {
                             Array(30).fill({title: "hello"}).map((_, i)=>(
                                 <div key={i}>
-                                    <CategoriesCard />
+                                    <CategoriesCard title="Lifestyle" link="/charts/categories/lifestyle" />
                                 </div>
                             ))
                         }

@@ -5,6 +5,11 @@ import Charts from './pages/Charts'
 import Topcreators from './pages/Topcreators'
 import Campaigns from './pages/Campaigns'
 import Top100 from './pages/Charts/Top100'
+import Category from './pages/Charts/Category'
+import Login from './pages/AuthPages/Login'
+import Register from './pages/AuthPages/Register'
+import Dashboard from './pages/Dashboard'
+import Dashboardlayout from './pages/Layouts/Dashboardlayout'
 
 function App() {
 
@@ -22,12 +27,34 @@ function App() {
       Component: Top100
     },
     {
+      path: "charts/categories/:category",
+      Component: Category
+    },
+    {
       path: "topcreators",
       Component: Topcreators
     },
     {
       path: "campaigns",
       Component: Campaigns
+    },
+    {
+      path: "auth/login",
+      Component: Login
+    },
+    {
+      path: "auth/register",
+      Component: Register
+    },
+    {
+      path: "dashboard",
+      Component: Dashboardlayout,
+      children: [
+        {
+          index: true,
+          Component: Dashboard
+        }
+      ]
     }
   ])
 
