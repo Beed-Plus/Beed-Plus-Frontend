@@ -1,5 +1,3 @@
-import { Images } from "../assets";
-import ActionButton from "../components/ActionButton";
 import Baselayout from "../components/Baselayout";
 import CreatorRankingComponent from "../components/CreatorRankingComponent";
 import Header from "../components/Header";
