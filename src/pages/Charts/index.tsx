@@ -1,7 +1,6 @@
 import { Link } from "react-router";
 import { Images } from "../../assets";
 import CategoriesCard from "../../modules/Home/CategoriesCard";
-import { MarketplaceSection } from "../../modules";
 import Baselayout from "../../components/Baselayout";
 
 export default function Charts(){
@@ -37,7 +36,7 @@ export default function Charts(){
                     </div>
                 </div>
             </div>
-            <MarketplaceSection />
+            {/* <MarketplaceSection /> */}
         </Baselayout>
     )
 }

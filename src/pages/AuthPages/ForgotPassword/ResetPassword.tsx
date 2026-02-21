@@ -1,9 +1,8 @@
-import { Link } from "react-router";
 import Baselayout from "../../../components/Baselayout";
 import CustomButton from "../../../components/CustomButton";
 import CustomTextInput from "../../../components/CustomTextInput";
 
-export default function Login(){
+export default function ResetPassword(){
     return(
         <Baselayout
             theme="light"
@@ -15,27 +14,26 @@ export default function Login(){
         >
             <div className="h-[80vh]">
                 <div className="flex h-full justify-center items-center">
-                    <div className="flex flex-col items-center">
-                        <p className="text-[20px] lg:text-[32px] font-semibold text-center">Login to your Creator Dashboard</p>
-                        <p className="text-[#ADADAD] text-[16px] lg:text-[18px] text-center">Welcome back! Please enter your details</p>
-                        <div className="lg:w-[80%] py-4 my-4">
+                    <div className="lg:w-[30vw] flex flex-col items-center">
+                        <p className="text-[20px] lg:text-[32px] font-semibold text-center">Reset Password</p>
+                       
+                        <div className="py-4 my-4 w-full">
                             <p className="lg:text-[18px] text-center text-primary-orange">{}</p>
                             <CustomTextInput 
-                                label="Email Address"
-                                placeholder="Enter your email address"
+                                label="Enter New Password"
+                                placeholder="Enter your new password"
                                 value=""
                             />
                             <CustomTextInput 
-                                label="Password"
-                                placeholder="Enter your password"
+                                label="Confirm Password"
+                                placeholder="Confirm your password"
                                 value=""
                             />
-                            <Link to={"/auth/forgotpassword"} className="text-primary-orange underline">Forgot Password?</Link>
+                           
                             <CustomButton 
-                                text="Login"
+                                text="Reset Password"
                                 onClick={()=>{}}
                             />
-                            <div>You don't have an account? <Link className="underline text-primary-orange" to={"/auth/register"}> Click here to Sign up</Link></div>
                         </div>
                     </div>
                 </div>

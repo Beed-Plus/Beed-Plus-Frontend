@@ -1,7 +1,6 @@
 import Baselayout from "../../components/Baselayout";
 import Header from "../../components/Header";
 import VideoRankingComponent from "../../components/VideoRankingComponent";
-import { MarketplaceSection } from "../../modules";
 
 
 
@@ -36,7 +35,7 @@ export default function Top100(){
                 <VideoRankingComponent position={2} />
                 <VideoRankingComponent position={3} />
             </div>
-            <MarketplaceSection />
+            {/* <MarketplaceSection /> */}
         </Baselayout>
     )
 }

@@ -2,8 +2,6 @@ import { Images } from "../assets";
 import ActionButton from "../components/ActionButton";
 import Baselayout from "../components/Baselayout";
 import HomepageChartCards from "../components/HomepageChartCards";
-import { MarketplaceSection } from "../modules";
-import { CampaignCard } from "../modules/Home";
 import CategoriesCard from "../modules/Home/CategoriesCard";
 
 export default function Home(){
@@ -58,7 +56,7 @@ export default function Home(){
                     </div>
                 </div>
             </section>
-           <MarketplaceSection />
+           {/* <MarketplaceSection />
             <section>
                 <div className="py-12">
                     <h1 className="text-[32px] lg:text-[56px] text-white text-center font-bold my-6">Top Campaigns</h1>
@@ -72,7 +70,7 @@ export default function Home(){
                         />
                     </div>
                 </div>
-            </section>
+            </section> */}
         </Baselayout>
     )
 }

@@ -1,7 +1,65 @@
+import { Link } from "react-router";
+import Baselayout from "../../../components/Baselayout";
+import CustomTextInput from "../../../components/CustomTextInput";
+import CustomButton from "../../../components/CustomButton";
+import { useState } from "react";
+
 export default function Register(){
+    let [stage, setStage] = useState(1)
     return(
-        <div>
-            This is the MF Register Page :(
-        </div>
+        <Baselayout
+            theme="light"
+            showBgImage={false}
+            logoType="dark"
+            customFooterComponent={
+                <></>
+            }
+        >
+            <div className="min-h-[80vh]">
+                <div className="flex h-full justify-center items-center">
+                    <div className="flex flex-col items-center">
+                        <p className="text-[20px] lg:text-[32px] font-semibold text-center">Signup as a creator</p>
+                        <p className="text-[#ADADAD] text-[16px] lg:text-[18px] text-center">Please enter your details to sign up as a creator on Beed+</p>
+                        <div className="lg:w-[80%] py-4 my-4">
+                            <p className="lg:text-[18px] text-center text-primary-orange">{}</p>
+                            <div>
+
+                            </div>
+                            {
+                                stage == 1
+                                ?
+                                <div>
+                                    <CustomTextInput 
+                                        label="Name"
+                                        placeholder="Enter your name"
+                                        value=""
+                                    />
+                                    <CustomTextInput 
+                                        label="Email Address"
+                                        placeholder="Enter your email address"
+                                        value=""
+                                    />
+                                    <CustomTextInput 
+                                        label="Confirm Email Address"
+                                        placeholder="Confirm your email address"
+                                        value=""
+                                    />
+                                    <Link to={"/auth/forgotpassword"} className="text-primary-orange underline">Forgot Password?</Link>
+                                    <CustomButton 
+                                        text="Next"
+                                        onClick={()=>{}}
+                                    />
+                                </div>
+                                :
+                                <div>
+                                    
+                                </div>
+                            }
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Baselayout>
     )
 }

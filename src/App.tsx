@@ -10,6 +10,8 @@ import Login from './pages/AuthPages/Login'
 import Register from './pages/AuthPages/Register'
 import Dashboard from './pages/Dashboard'
 import Dashboardlayout from './pages/Layouts/Dashboardlayout'
+import ForgotPassword from './pages/AuthPages/ForgotPassword'
+import ResetPassword from './pages/AuthPages/ForgotPassword/ResetPassword'
 
 function App() {
 
@@ -45,6 +47,14 @@ function App() {
     {
       path: "auth/register",
       Component: Register
+    },
+    {
+      path: "auth/forgotpassword",
+      Component: ForgotPassword
+    },
+    {
+      path: "auth/resetpassword",
+      Component: ResetPassword
     },
     {
       path: "dashboard",
