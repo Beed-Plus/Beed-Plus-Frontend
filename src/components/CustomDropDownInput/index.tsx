@@ -1,7 +1,7 @@
 interface CDIInterface {
     label?: string;
     value: string;
-    placeholder: string;
+    placeholder?: string;
     errormsg?: string;
     description?: string;
     data?: any[];
@@ -22,7 +22,7 @@ export default function CustomDropDownInput(props: CDIInterface){
                     ))
                 }
             </select>
-            {props.description && <div>{props.description}</div>}
+            {props.description && <div className="text-[12px] text-[#ADADAD] my-2">{props.description}</div>}
             {props.errormsg && <div className="text-[#F87A15] my-2">{props.errormsg}</div>}
         </div>
     )
