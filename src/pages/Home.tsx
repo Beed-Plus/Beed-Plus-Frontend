@@ -2,7 +2,6 @@ import { Images } from "../assets";
 import ActionButton from "../components/ActionButton";
 import Baselayout from "../components/Baselayout";
 import HomepageChartCards from "../components/HomepageChartCards";
-import CategoriesCard from "../modules/Home/CategoriesCard";
 
 export default function Home(){
 
@@ -13,7 +12,7 @@ export default function Home(){
                 <div className="lg:flex pt-20 w-full justify-between">
                 <div className="lg:w-[44%]">
                     <h1 className="lg:text-[48px] text-[32px] text-center lg:text-left text-white font-semibold">
-                        Official Creators <span className="text-primary-yellow">Chart</span> and Brand <span className="text-primary-yellow">Campaign</span> Discovery
+                        Official Creators <span className="text-primary-yellow">Chart</span> and <span className="text-primary-yellow">Discovery</span>
                     </h1>
                     <p className="text-[20px] lg:text-[24px] text-center lg:text-left text-white my-6">
                         Discover the best creators. Track your growth across every platform. Get found by the brands that matter.
@@ -22,13 +21,13 @@ export default function Home(){
                         <div>
                             <ActionButton 
                                 title="Register"
-                                link=""
+                                link="/auth/register"
                             />
                         </div>
                     </div>
                 </div>
                 <div className="hidden lg:flex w-[50%] justify-center items-center">
-                    <CategoriesCard link="/charts/categories/lifestyle" title="Lifestyle" />
+                    <img src={Images.carouselImage} />
                 </div>
             </div>
             }
@@ -50,7 +49,7 @@ export default function Home(){
                         <div className="p-4 h-full bg-[url(/carousel-card-bg.png)] bg-no-repeat">
                             <div className="relative h-full">
                                 <img src={Images.logoBlack} className="w-[40%] lg:w-[20%]" />
-                                <p className="absolute bottom-0 right-0 lg:right-0 text-[32px] lg:text-[72px] font-bold text-black text-right w-[65%]">Creators</p>
+                                <p className="absolute bottom-0 right-0 lg:right-0 text-[32px] lg:text-[72px] font-bold text-black text-right w-[65%]">Top Hits</p>
                             </div>
                         </div>
                     </div>

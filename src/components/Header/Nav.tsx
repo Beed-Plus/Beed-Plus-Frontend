@@ -23,10 +23,14 @@ export default function Nav(props: NavInterface){
                     title="Top Creators"
                     link="/topcreators"
                 />
+                <NavItem 
+                    title="Top Hits"
+                    link="/tophits"
+                />
                 
             </div>
             {/* mobile nav */}
-            <div className={`lg:hidden ${!props.isNavOpen && "hidden"} pt-20 fixed w-[60%] top-0 left-0 bottom-0 bg-black/50 backdrop-blur-sm z-100 `}>
+            <div className={`lg:hidden ${!props.isNavOpen && "hidden"} pt-20 fixed w-[60%] top-0 left-0 bottom-0 bg-black/50 backdrop-blur-sm z-100 ${props.theme == "light" ? "text-black border-primary-yellow" : "text-white border-y-white/50 border-x-[#555]/30"} `}>
                 <div onClick={()=>{props.setNavOpen(false)}} className="flex justify-end p-4">
                     <CloseWhite />
                 </div>
@@ -44,7 +48,11 @@ export default function Nav(props: NavInterface){
                     <NavItem 
                         title="Top Creators"
                         link="/topcreators"
-                    />                
+                    />   
+                    <NavItem 
+                        title="Top Hits"
+                        link="/tophits"
+                    />             
                 </div>
             </div>
         </>

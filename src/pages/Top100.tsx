@@ -1,6 +1,6 @@
-import Baselayout from "../../components/Baselayout";
-import Header from "../../components/Header";
-import VideoRankingComponent from "../../components/VideoRankingComponent";
+import Baselayout from "../components/Baselayout";
+import Header from "../components/Header";
+import VideoRankingComponent from "../components/VideoRankingComponent";
 
 
 

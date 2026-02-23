@@ -23,7 +23,7 @@ interface StepInterface {
 function Step(props: StepInterface){
     return(
         <div className="flex items-center">
-            {props.step > 1  && <div className={`h-[3px] md:w-[113px] ${props.isActive ? "bg-primary-orange" : "bg-[#ADADAD]"}`} />}
+            {props.step > 1  && <div className={`h-[3px] w-[113px] ${props.isActive ? "bg-primary-orange" : "bg-[#ADADAD]"}`} />}
             <div className={`w-[40px] h-[40px] rounded-full ${props.isActive ? "bg-primary-orange text-white" : "border-2 text-[#ADADAD] border-[#ADADAD]"} flex justify-center items-center`}>
                 {props.step}
             </div>

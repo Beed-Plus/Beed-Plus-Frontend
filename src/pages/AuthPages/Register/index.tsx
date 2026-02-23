@@ -23,7 +23,7 @@ export default function Register(){
                     <div className="flex flex-col items-center">
                         <p className="text-[20px] lg:text-[32px] font-semibold text-center">Signup as a creator</p>
                         <p className="text-[#ADADAD] text-[16px] lg:text-[18px] text-center">Please enter your details to sign up as a creator on Beed+</p>
-                        <div className="lg:w-[80%] py-4 my-4">
+                        <div className="w-[90%] lg:w-[80%] py-4 my-4">
                             <p className="lg:text-[18px] text-center text-primary-orange">{}</p>
                             <div className="w-full flex justify-center">
                                 <SignupStep 

@@ -7,6 +7,7 @@ import campaignMockBanner from "./campaign-banner.png"
 import bigLogo from "./logo-footer-big.png"
 import rankingImg from "./ranking-placeholder.png"
 import mockDpMale from "./mock-dp-male.png"
+import carouselImage from "./carousel-image.png"
 
 export const Images = {
     logoWhite,
@@ -17,5 +18,6 @@ export const Images = {
     campaignMockBanner,
     bigLogo,
     rankingImg,
-    mockDpMale
+    mockDpMale,
+    carouselImage
 }

@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import Charts from './pages/Charts'
 import Topcreators from './pages/Topcreators'
 import Campaigns from './pages/Campaigns'
-import Top100 from './pages/Charts/Top100'
+import Top100 from './pages/Top100'
 import Category from './pages/Charts/Category'
 import Login from './pages/AuthPages/Login'
 import Register from './pages/AuthPages/Register'
@@ -12,6 +12,7 @@ import Dashboard from './pages/Dashboard'
 import Dashboardlayout from './pages/Layouts/Dashboardlayout'
 import ForgotPassword from './pages/AuthPages/ForgotPassword'
 import ResetPassword from './pages/AuthPages/ForgotPassword/ResetPassword'
+import TopHits from './pages/TopHits'
 
 function App() {
 
@@ -39,6 +40,10 @@ function App() {
     {
       path: "campaigns",
       Component: Campaigns
+    },
+    {
+      path: "tophits",
+      Component: TopHits
     },
     {
       path: "auth/login",

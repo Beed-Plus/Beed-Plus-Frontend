@@ -1,8 +1,8 @@
 import Baselayout from "../components/Baselayout";
-import CreatorRankingComponent from "../components/CreatorRankingComponent";
 import Header from "../components/Header";
+import VideoRankingComponent from "../components/VideoRankingComponent";
 
-export default function Topcreators(){
+export default function TopHits(){
     return(
         <Baselayout
             customTopComponent={
@@ -10,8 +10,8 @@ export default function Topcreators(){
                     <div className="lg:px-20 px-5 py-5">
                         <Header />
                     </div>
-                    <div className="bg-[#3D783C] rounded-t-[16px] lg:rounded-t-[0px] py-4 bg-[url(/scribble-bg.png)] bg-cover bg-center bg-no-repeat inset-shadow-[-9px_-5px_15px_0_rgba(0,0,0,0.25)]">
-                        <p className="text-[40px] lg:text-[72px] text-center font-bold">Top Creators</p>
+                    <div className="bg-[#FFEBCB] rounded-t-[16px] lg:rounded-t-[0px] py-4 bg-[url(/scribble-bg.png)] bg-cover bg-center bg-no-repeat inset-shadow-[-9px_-5px_15px_0_rgba(0,0,0,0.25)]">
+                        <p className="text-[40px] lg:text-[72px] text-center font-bold">Top Hits</p>
                     </div>
                     <div className="flex gap-5 justify-center items-center py-6 border-b-[1px] border-[#FFF]/20 rounded-[16px]">
                         <div className="bg-white p-2 rounded-[8px]">
@@ -29,7 +29,7 @@ export default function Topcreators(){
             }
         >
             <div className="flex items-start min-h-[50vh] justify-center">
-                <CreatorRankingComponent position={1} />
+                <VideoRankingComponent position={1} />
             </div>
             {/* <section>
                 <div className={`bg-radial-[at_45%_80%] from-transparent to-black to-60% py-12`}>
