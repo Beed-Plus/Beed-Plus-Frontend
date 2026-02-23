@@ -15,7 +15,7 @@ interface BaselayoutInterface {
 
 export default function Baselayout(props: BaselayoutInterface){
     return(
-        <div className={`${props.theme == "light" ? "bg-[#FFFBFA]" : "bg-black"} bg-position-[bottom_200px]`}>
+        <div className={`${props.theme == "light" ? "bg-[#FFFBFA]" : "bg-black"}`}>
             {
                 props.customTopComponent
                 ?

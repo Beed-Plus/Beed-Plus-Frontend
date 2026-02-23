@@ -9,7 +9,7 @@ export default function Home(){
     return(
         <Baselayout
             topComponent={
-                <div className="lg:flex pt-20 w-full justify-between">
+                <div className="lg:flex pt-5 md:pt-20 w-full justify-between">
                 <div className="lg:w-[44%]">
                     <h1 className="lg:text-[48px] text-[32px] text-center lg:text-left text-white font-semibold">
                         Official Creators <br /> <span className="text-primary-yellow">Chart</span> and <span className="text-primary-yellow">Discovery</span>
