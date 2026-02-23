@@ -12,7 +12,7 @@ export default function Home(){
                 <div className="lg:flex pt-20 w-full justify-between">
                 <div className="lg:w-[44%]">
                     <h1 className="lg:text-[48px] text-[32px] text-center lg:text-left text-white font-semibold">
-                        Official Creators <span className="text-primary-yellow">Chart</span> and <span className="text-primary-yellow">Discovery</span>
+                        Official Creators <br /> <span className="text-primary-yellow">Chart</span> and <span className="text-primary-yellow">Discovery</span>
                     </h1>
                     <p className="text-[20px] lg:text-[24px] text-center lg:text-left text-white my-6">
                         Discover the best creators. Track your growth across every platform. Get found by the brands that matter.
