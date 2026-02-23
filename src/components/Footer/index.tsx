@@ -24,7 +24,7 @@ export default function Footer(){
                         </div>
                         <div className="flex items-center justify-between lg:gap-5">
                             <div  className="flex my-2 gap-2 text-white text-[12px] lg:text-[14px] md:text-[18px] border-[2px] border-primary-yellow px-4 lg:px-6 py-2 text-center items-center justify-center rounded-[25px] bg-neutral-500/10 backdrop-blur-sm hover:bg-neutral-500/20">
-                                beedplus@gmail.com
+                                contact@beedplus.com
                             </div>
                             <ActionButton 
                                 title="Contact us"
