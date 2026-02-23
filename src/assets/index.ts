@@ -6,6 +6,7 @@ import chartCardImg from "./chart-card-img.png"
 import campaignMockBanner from "./campaign-banner.png"
 import bigLogo from "./logo-footer-big.png"
 import rankingImg from "./ranking-placeholder.png"
+import mockDpMale from "./mock-dp-male.png"
 
 export const Images = {
     logoWhite,
@@ -15,5 +16,6 @@ export const Images = {
     chartCardImg,
     campaignMockBanner,
     bigLogo,
-    rankingImg
+    rankingImg,
+    mockDpMale
 }
