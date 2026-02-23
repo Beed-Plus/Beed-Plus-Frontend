@@ -32,9 +32,9 @@ export default function Home(){
             </div>
             }
         >
-            <section className="py-12">
+            <section className="md:py-12">
                 <h1 className="text-white text-[32px] lg:text-[58px] font-bold text-center">Official Charts</h1>
-                <div className="lg:grid lg:grid-cols-4 lg:gap-4">
+                <div className="md:grid md:grid-cols-4 md:gap-4">
                     <HomepageChartCards 
                         text="Charts"
                         color="#FEA514"
@@ -45,14 +45,22 @@ export default function Home(){
                         color="#3D783C"
                         link="/topcreators"
                     />
-                    <div className={`lg:col-span-2 lg:col-start-2 bg-[#FFEBCB] relative h-[232px] lg:h-[333px] rounded-[16px] my-4 lg:my-0`}>
+                    <div className="md:col-span-2 lg:col-start-2">
+                        <HomepageChartCards 
+                            text="Top Hits"
+                            textColor="black"
+                            color="#FFEBCB"
+                            link="/tophits"
+                        />
+                    </div>
+                    {/* <div className={`lg:col-span-2 lg:col-start-2 bg-[#FFEBCB] relative h-[232px] lg:h-[333px] rounded-[16px] my-4 lg:my-0`}>
                         <div className="p-4 h-full bg-[url(/carousel-card-bg.png)] bg-no-repeat">
                             <div className="relative h-full">
                                 <img src={Images.logoBlack} className="w-[40%] lg:w-[20%]" />
-                                <p className="absolute bottom-0 right-0 lg:right-0 text-[32px] lg:text-[72px] font-bold text-black text-right w-[65%]">Top Hits</p>
+                                <p className="absolute bottom-0 right-0 lg:right-0 text-[36px] lg:text-[72px] font-bold text-black text-right w-[65%]">Top Hits</p>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
            {/* <MarketplaceSection />

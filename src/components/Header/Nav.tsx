@@ -68,7 +68,7 @@ function NavItem(props: NavItemInterface){
     
     return(
         <>
-            <NavLink to={props.link} className={({isActive})=> `flex px-4 py-2 justify-center items-center text-[14px] lg:text-[16px] ${isActive && "bg-primary-yellow/15 backdrop-blur-[2px] inset-shadow-[1px_-1px_0px_0px_rgba(255,_255,_255,_0.5)]"} rounded-[20px] transition-all`}>
+            <NavLink to={props.link} className={({isActive})=> `flex px-4 py-2 justify-center items-center text-[14px] xl:text-[16px] ${isActive && "bg-primary-yellow/15 backdrop-blur-[2px] inset-shadow-[1px_-1px_0px_0px_rgba(255,_255,_255,_0.5)]"} rounded-[20px] transition-all`}>
                 {props.title}
             </NavLink>
             <div className="border-[1px] border-[#242323] mt-4 lg:border-none" />

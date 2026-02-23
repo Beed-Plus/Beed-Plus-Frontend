@@ -15,7 +15,7 @@ export default function Footer(){
             <BgView>
                 <div className="h-full pt-12">
                     <div className="flex justify-between items-start">
-                        <div className="w-[70%] lg:w-auto">
+                        <div className="w-[60%] lg:w-auto">
                             <div className="flex w-[112px] lg:w-auto gap-5 lg:justify-between items-center mb-2 lg:mb-4">
                                 <TwitterLogo />
                                 <InstagramLogo />
