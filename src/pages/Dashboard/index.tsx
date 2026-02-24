@@ -2,12 +2,21 @@ import { useSearchParams } from "react-router";
 import { Images } from "../../assets";
 import CustomButton from "../../components/CustomButton";
 import { APP_ID } from "../../constants";
+import { useEffect } from "react";
+import { getShortLivedToken } from "../../api";
 
 export default function Dashboard(){
     //let navigate = useNavigate()
     let [searchParams] = useSearchParams()
 
-    console.log("search params", searchParams, searchParams.get("code"))
+    let code = searchParams.get("code")
+    console.log("search params", searchParams, code)
+    useEffect(()=>{
+        if(code !== null){
+            getShortLivedToken(code)
+        }
+    }, [])
+
     return(
         <div>
             <div>
