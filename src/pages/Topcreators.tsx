@@ -1,28 +1,46 @@
+import { useRef, useState } from "react";
 import Baselayout from "../components/Baselayout";
 import CreatorRankingComponent from "../components/CreatorRankingComponent";
 import Header from "../components/Header";
 
 export default function Topcreators(){
+    const scRef = useRef<HTMLDivElement | null>(null)
+    let [stickyStyle, setStickyStyle] = useState<string | null>(null)
+
+
+    window.addEventListener("scroll", ()=>{
+        if(stickyStyle == null){
+            if(scRef?.current?.getBoundingClientRect()?.top! < 0){
+                setStickyStyle("fixed w-full top-0")
+            }else{
+                setStickyStyle("")
+            }
+
+        }
+    })
+
     return(
         <Baselayout
             customTopComponent={
-                <div>
-                    <div className="lg:px-20 px-5 py-5">
+                <div className="bg-[url(/hero-bg.jpg)] bg-cover bg-center pb-4">
+                    <div className="lg:px-20 px-5 py-5 bg-black">
                         <Header />
                     </div>
-                    <div className="bg-[#3D783C] rounded-t-[16px] lg:rounded-t-[0px] py-4 bg-[url(/scribble-bg.png)] bg-cover bg-center bg-no-repeat inset-shadow-[-9px_-5px_15px_0_rgba(0,0,0,0.25)]">
-                        <p className="text-[40px] lg:text-[72px] text-center font-bold">Top Creators</p>
-                    </div>
-                    <div className="flex gap-5 justify-center items-center py-6 border-b-[1px] border-[#FFF]/20 rounded-[16px]">
-                        <div className="bg-white p-2 rounded-[8px]">
-                            <select className="lg:px-4">
-                                <option>Beed+ Top 10</option>
-                            </select>
+                    <div ref={scRef} className={/*stickyStyle*/ ""}>
+                        <div className="bg-[#3D783C] rounded-t-[16px] lg:rounded-t-[0px] py-4 bg-[url(/scribble-bg.png)] bg-cover bg-center bg-no-repeat inset-shadow-[-9px_-5px_15px_0_rgba(0,0,0,0.25)]">
+                            <p className="text-[40px] lg:text-[72px] text-center font-bold">Top Creators</p>
                         </div>
-                        <div className="bg-white p-2 rounded-[8px]">
-                            <select className="lg:px-4">
-                                <option>Nigeria</option>
-                            </select>
+                        <div className="flex gap-5 justify-center items-center px-4 py-6 border-b-[1px] bg-[#000]/20 backdrop-blur-sm border-[#FFF]/20 rounded-[16px]">
+                            <div className="bg-white w-full md:w-[319px] p-2 rounded-[8px]">
+                                <select className="lg:px-4">
+                                    <option>Beed+ Top 10</option>
+                                </select>
+                            </div>
+                            <div className="bg-white w-full md:w-[319px] p-2 rounded-[8px]">
+                                <select className="lg:px-4">
+                                    <option>Nigeria</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>

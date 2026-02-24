@@ -1,9 +1,10 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import Baselayout from "../../../components/Baselayout";
 import CustomButton from "../../../components/CustomButton";
 import CustomTextInput from "../../../components/CustomTextInput";
 
 export default function Login(){
+    const navigate = useNavigate()
     return(
         <Baselayout
             theme="light"
@@ -33,7 +34,9 @@ export default function Login(){
                             <Link to={"/auth/forgotpassword"} className="text-primary-orange underline">Forgot Password?</Link>
                             <CustomButton 
                                 text="Login"
-                                onClick={()=>{}}
+                                onClick={()=>{
+                                    navigate("/dashboard")
+                                }}
                             />
                             <div>You don't have an account? <Link className="underline text-primary-orange" to={"/auth/register"}> Click here to Sign up</Link></div>
                         </div>

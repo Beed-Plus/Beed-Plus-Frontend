@@ -1,8 +1,12 @@
+import { useSearchParams } from "react-router";
 import Baselayout from "../../components/Baselayout";
 import Header from "../../components/Header";
 import VideoRankingComponent from "../../components/VideoRankingComponent";
 
 export default function Category(){
+    let [searchParams] = useSearchParams()
+
+    console.log("search params", searchParams)
     return(
         <Baselayout
             customTopComponent={

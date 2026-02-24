@@ -26,6 +26,7 @@ export default function Header(props: HeaderInterface){
             <Nav isNavOpen={isNavOpen} setNavOpen={setIsNavOpen} theme={props.theme || "dark"} />
             <ActionButton 
                 title="Login"
+                theme={props.theme}
                 link="/auth/login"
             />
         </div>

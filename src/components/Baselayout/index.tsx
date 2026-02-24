@@ -19,7 +19,9 @@ export default function Baselayout(props: BaselayoutInterface){
             {
                 props.customTopComponent
                 ?
-                props.customTopComponent
+                <div>
+                    {props.customTopComponent}
+                </div>
                 :
                 <BgView
                     showBgImage={props.showBgImage}
