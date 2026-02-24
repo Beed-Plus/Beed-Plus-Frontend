@@ -5,39 +5,36 @@ import Header from "../components/Header";
 
 export default function Topcreators(){
     const scRef = useRef<HTMLDivElement | null>(null)
-    let [stickyStyle, setStickyStyle] = useState<string | null>(null)
+    let [stickyStyle, setStickyStyle] = useState<string | null>("")
 
 
     window.addEventListener("scroll", ()=>{
-        if(stickyStyle == null){
-            if(scRef?.current?.getBoundingClientRect()?.top! < 0){
-                setStickyStyle("fixed w-full top-0")
-            }else{
-                setStickyStyle("")
-            }
-
+        if(scRef?.current?.getBoundingClientRect()?.top! < 0){
+            setStickyStyle("fixed w-full top-0")
+        }else{
+            setStickyStyle("")
         }
     })
 
     return(
         <Baselayout
             customTopComponent={
-                <div className="bg-[url(/hero-bg.jpg)] bg-cover bg-center pb-4">
-                    <div className="lg:px-20 px-5 py-5 bg-black">
+                <div className="bg-[url(/hero-bg.jpg)] relative bg-cover bg-center pb-4">
+                    <div className="lg:px-20 px-5 py-5 bg-[#000]/60">
                         <Header />
                     </div>
-                    <div ref={scRef} className={/*stickyStyle*/ ""}>
+                    <div ref={scRef} className={`${stickyStyle || ""}`}>
                         <div className="bg-[#3D783C] rounded-t-[16px] lg:rounded-t-[0px] py-4 bg-[url(/scribble-bg.png)] bg-cover bg-center bg-no-repeat inset-shadow-[-9px_-5px_15px_0_rgba(0,0,0,0.25)]">
                             <p className="text-[40px] lg:text-[72px] text-center font-bold">Top Creators</p>
                         </div>
                         <div className="flex gap-5 justify-center items-center px-4 py-6 border-b-[1px] bg-[#000]/20 backdrop-blur-sm border-[#FFF]/20 rounded-[16px]">
                             <div className="bg-white w-full md:w-[319px] p-2 rounded-[8px]">
-                                <select className="lg:px-4">
+                                <select className="lg:px-4 w-full">
                                     <option>Beed+ Top 10</option>
                                 </select>
                             </div>
                             <div className="bg-white w-full md:w-[319px] p-2 rounded-[8px]">
-                                <select className="lg:px-4">
+                                <select className="lg:px-4 w-full">
                                     <option>Nigeria</option>
                                 </select>
                             </div>

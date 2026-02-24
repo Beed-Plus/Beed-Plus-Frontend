@@ -1,4 +1,4 @@
-import type { ReactNode } from "react"
+import { useEffect, useRef, type ReactNode } from "react"
 import BgView from "../BgView";
 import Header from "../Header";
 import Footer from "../Footer";
@@ -14,8 +14,14 @@ interface BaselayoutInterface {
 }
 
 export default function Baselayout(props: BaselayoutInterface){
+    let layoutRef = useRef<HTMLDivElement | null>(null)
+
+    useEffect(()=>{
+        layoutRef.current?.scrollTo({top: 0})
+    }, [])
+
     return(
-        <div className={`${props.theme == "light" ? "bg-[#FFFBFA]" : "bg-black"}`}>
+        <div ref={layoutRef} className={`${props.theme == "light" ? "bg-[#FFFBFA]" : "bg-black"}`}>
             {
                 props.customTopComponent
                 ?
