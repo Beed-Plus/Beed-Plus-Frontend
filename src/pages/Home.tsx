@@ -1,38 +1,45 @@
 import { Images } from "../assets";
 import ActionButton from "../components/ActionButton";
 import Baselayout from "../components/Baselayout";
+import BgView from "../components/BgView";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 import HomepageChartCards from "../components/HomepageChartCards";
+import Section from "../components/Section";
 
 export default function Home(){
 
 
     return(
-        <Baselayout
-            topComponent={
-                <div className="lg:flex pt-5 md:pt-20 w-full justify-between">
-                <div className="lg:w-[44%]">
-                    <h1 className="lg:text-[48px] text-[32px] text-center lg:text-left text-white font-semibold">
-                        Official Creators <br /> <span className="text-primary-yellow">Chart</span> and <span className="text-primary-yellow">Discovery</span>
-                    </h1>
-                    <p className="text-[20px] lg:text-[24px] text-center lg:text-left text-white my-6">
-                        Discover the best creators. Track your growth across every platform. Get found by the brands that matter.
-                    </p>
-                    <div className="flex justify-center lg:w-[30%] w-full my-4">
-                        <div>
-                            <ActionButton 
-                                title="Register"
-                                link="/auth/register"
-                            />
+        <Baselayout>
+            <BgView>
+
+                <Section>
+                    <Header />
+                    <div className="lg:flex pt-5 md:pt-20 w-full justify-between">
+                        <div className="lg:w-[44%]">
+                            <h1 className="lg:text-[48px] text-[32px] text-center lg:text-left text-white font-semibold">
+                                Official Creators <br /> <span className="text-primary-yellow">Chart</span> and <span className="text-primary-yellow">Discovery</span>
+                            </h1>
+                            <p className="text-[20px] lg:text-[24px] text-center lg:text-left text-white my-6">
+                                Discover the best creators. Track your growth across every platform. Get found by the brands that matter.
+                            </p>
+                            <div className="flex justify-center lg:w-[30%] w-full my-4">
+                                <div>
+                                    <ActionButton 
+                                        title="Register"
+                                        link="/auth/register"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="hidden lg:flex w-[50%] justify-center items-center">
+                            <img src={Images.carouselImage} />
                         </div>
                     </div>
-                </div>
-                <div className="hidden lg:flex w-[50%] justify-center items-center">
-                    <img src={Images.carouselImage} />
-                </div>
-            </div>
-            }
-        >
-            <section className="md:py-12">
+                </Section>
+            </BgView>
+            <Section>
                 <h1 className="text-white text-[32px] lg:text-[58px] font-bold text-center">Official Charts</h1>
                 <div className="md:grid md:grid-cols-4 md:gap-4">
                     <HomepageChartCards 
@@ -62,7 +69,7 @@ export default function Home(){
                         </div>
                     </div> */}
                 </div>
-            </section>
+            </Section>
            {/* <MarketplaceSection />
             <section>
                 <div className="py-12">
@@ -78,6 +85,7 @@ export default function Home(){
                     </div>
                 </div>
             </section> */}
+            <Footer />
         </Baselayout>
     )
 }

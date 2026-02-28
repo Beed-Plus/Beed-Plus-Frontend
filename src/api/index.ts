@@ -1,8 +1,18 @@
 import axios from "axios";
-import { APP_ID, APP_SECRET } from "../constants";
+import { baseUrl } from "../constants";
 
-export async function getShortLivedToken(code: string){
-    console.log("getting shortlived token..")
-    let res = await axios.post(`https://api.instagram.com/oauth/access_token?client_id=${APP_ID}&client_secret=${APP_SECRET}&grant_type=authorization_code&redirect_uri=https://beedplus.com/dashboard&code=${code}`)
-    console.log("response", res)
+export async function postData(endpoint: string, body: any, authToken?: string){
+    try{
+        let res = await axios.post(`${baseUrl}${endpoint}`, body, {
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "Authorization": `Bearer ${authToken}`
+            }
+        })
+
+        return {response: res}
+    }catch(err: any){
+        return {error: err}
+    }
 }

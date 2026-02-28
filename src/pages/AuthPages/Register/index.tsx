@@ -9,6 +9,9 @@ import { useNavigate } from "react-router";
 export default function Register(){
     let navigate = useNavigate()
     let [stage, setStage] = useState(1)
+
+    
+
     return(
         <Baselayout
             theme="light"

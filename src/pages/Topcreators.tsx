@@ -1,29 +1,19 @@
-import { useRef, useState } from "react";
 import Baselayout from "../components/Baselayout";
 import CreatorRankingComponent from "../components/CreatorRankingComponent";
 import Header from "../components/Header";
+import BgView from "../components/BgView";
+import Footer from "../components/Footer";
 
 export default function Topcreators(){
-    const scRef = useRef<HTMLDivElement | null>(null)
-    let [stickyStyle, setStickyStyle] = useState<string | null>("")
-
-
-    window.addEventListener("scroll", ()=>{
-        if(scRef?.current?.getBoundingClientRect()?.top! < 0){
-            setStickyStyle("fixed w-full top-0")
-        }else{
-            setStickyStyle("")
-        }
-    })
 
     return(
-        <Baselayout
-            customTopComponent={
-                <div className="bg-[url(/hero-bg.jpg)] relative bg-cover bg-center pb-4">
+        <Baselayout>
+            <div style={{position: "sticky", top: 0}}>
+                <BgView>
                     <div className="lg:px-20 px-5 py-5 bg-[#000]/60">
                         <Header />
                     </div>
-                    <div ref={scRef} className={`${stickyStyle || ""}`}>
+                    <div>
                         <div className="bg-[#3D783C] rounded-t-[16px] lg:rounded-t-[0px] py-4 bg-[url(/scribble-bg.png)] bg-cover bg-center bg-no-repeat inset-shadow-[-9px_-5px_15px_0_rgba(0,0,0,0.25)]">
                             <p className="text-[40px] lg:text-[72px] text-center font-bold">Top Creators</p>
                         </div>
@@ -40,9 +30,8 @@ export default function Topcreators(){
                             </div>
                         </div>
                     </div>
-                </div>
-            }
-        >
+                </BgView>
+            </div>
             <div className="flex items-start min-h-[50vh] justify-center">
                 <CreatorRankingComponent position={1} />
             </div>
@@ -83,6 +72,7 @@ export default function Topcreators(){
                     </div>
                 </div>
             </section> */}
+            <Footer />
         </Baselayout>
     )
 }

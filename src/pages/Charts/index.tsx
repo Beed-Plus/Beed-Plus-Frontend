@@ -2,12 +2,16 @@ import { Link } from "react-router";
 import { Images } from "../../assets";
 import CategoriesCard from "../../modules/Home/CategoriesCard";
 import Baselayout from "../../components/Baselayout";
+import Section from "../../components/Section";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 export default function Charts(){
 
     return(
-        <Baselayout
-            topComponent={
+        <Baselayout>
+            <Section>
+                <Header />
                 <Link to={"/charts/top100"}>
                     <div className="py-4 lg:py-12">
                         <div className="relative h-[214px] md:h-auto lg:p-8 p-4 bg-[#FFEBCB] bg-[url(/scribble-bg.png)] bg-cover rounded-[24px] inset-shadow-[-9px_-5px_15px_0_rgba(0,0,0,0.25)]">
@@ -20,23 +24,25 @@ export default function Charts(){
                         </div>
                     </div>
                 </Link>
-            }
-        >
-            <div className="lg:py-6">
-                <div>
-                    <h1 className="text-white text-[32px] lg:text-[56px] text-center font-bold my-4">Categories</h1>
-                    <div className="grid grid-cols-3 xl:grid-cols-4 md:gap-5 gap-2">
-                        {
-                            Array(30).fill({title: "hello"}).map((_, i)=>(
-                                <div key={i}>
-                                    <CategoriesCard title="Lifestyle" link="/charts/categories/lifestyle" />
-                                </div>
-                            ))
-                        }
+            </Section>
+            <Section>
+                <div className="lg:py-6">
+                    <div>
+                        <h1 className="text-white text-[32px] lg:text-[56px] text-center font-bold my-4">Categories</h1>
+                        <div className="grid grid-cols-3 xl:grid-cols-4 md:gap-5 gap-2">
+                            {
+                                Array(30).fill({title: "hello"}).map((_, i)=>(
+                                    <div key={i}>
+                                        <CategoriesCard title="Lifestyle" link="/charts/categories/lifestyle" />
+                                    </div>
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Section>
             {/* <MarketplaceSection /> */}
+            <Footer />
         </Baselayout>
     )
 }
